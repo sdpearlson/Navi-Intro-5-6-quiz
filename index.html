@@ -70,7 +70,7 @@ button:focus-visible,.chip:focus-visible{outline:3px solid var(--gold);outline-o
 .muted{color:var(--muted)}
 /* study guide */
 .guide{display:grid;gap:22px}
-.gsec{display:grid;gap:10px}
+.gsec{display:grid;gap:10px;scroll-margin-top:120px}
 .gsec h3{font-size:1.35rem;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 .gsec h4{margin:6px 0 0;font-size:1rem}
 .gsec ul{margin:0;padding-left:20px;display:grid;gap:6px}
@@ -147,6 +147,19 @@ th{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .ebar{display:inline-block;width:70px;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
 .ebar i{display:block;height:100%;background:var(--gold);transition:width .15s}
 .ctl{font-size:.85rem;margin:8px 0 0}
+.star{display:inline-block;background:var(--gold);color:#1a1405;font:700 .68rem var(--body);letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
+.testbox{border:2px solid var(--gold);background:var(--gold-soft);border-radius:16px;padding:16px;display:grid;gap:10px}
+.testbox h3{font-size:1.35rem}
+.ckcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.ckcol{display:grid;gap:4px;align-content:start;min-width:0}
+.ckcol h4{margin:0 0 4px}
+.ck{display:flex;gap:8px;align-items:flex-start;padding:4px 0}
+.ck input{width:18px;height:18px;margin-top:3px;accent-color:var(--gold);flex:none}
+.ck label{flex:1;min-width:0}
+.ck .go{border:0;background:none;color:var(--ink);text-decoration:underline;font:500 .8rem var(--body);cursor:pointer;padding:0 0 0 4px}
+.ck.done label{color:var(--muted);text-decoration:line-through}
+.fmt{display:flex;flex-wrap:wrap;gap:6px}
+.fmt span{background:var(--surface);border:1px solid var(--stone);border-radius:8px;padding:3px 10px;font-size:.9rem}
 .qban{position:absolute;left:0;right:0;top:0;padding:10px 12px;background:rgba(11,18,34,.94);color:#EEF2F8;font-weight:500;font-size:1rem;line-height:1.35;pointer-events:none;display:grid;gap:4px;justify-items:start;border-bottom:1px solid #2E3D5C}
 @media (max-width:520px){.mgrid{grid-template-columns:1fr}.stage{padding:16px}.fcard{height:300px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -205,7 +218,7 @@ intro:`
 <li>Think about it: Where do <i>you</i> "see" yourself in a Navi story? (Example from class: David and Golyat, standing up to bullies.) What lessons do you remember from Shmuel Alef?</li>
 </ul></div>`,
 p5:`
-<div class="gsec"><h3><span class="tag t-5">פרק ה</span> David becomes king over all Israel (pesukim 1–5)</h3>
+<div class="gsec" id="g-king"><h3><span class="tag t-5">פרק ה</span> David becomes king over all Israel (pesukim 1–5)</h3>
 <p>All the tribes come to David in <b>Chevron</b> with <b>3 arguments</b> for why he should be king:</p>
 <ul>
 <li><b class="he">הִנְנוּ עַצְמְךָ וּבְשָׂרְךָ אֲנָחְנוּ</b> — "We are your bone and flesh" (we're family).</li>
@@ -213,15 +226,16 @@ p5:`
 <li>Hashem said: <b>you will shepherd (תִרְעֶה) My people</b> and be a ruler (נָגִיד) over Israel.</li>
 </ul>
 <p>The <b>elders of Israel (זקני ישראל)</b> made a covenant with David in Chevron and <b>anointed him</b> king over all Israel.</p>
+<h4>All the times David was anointed <span class="star">★ On the test</span></h4>
 <div class="tbl"><table><tr><th>#</th><th>Who anointed David?</th></tr>
 <tr><td>1</td><td>Shmuel HaNavi (Shmuel Alef 16)</td></tr>
 <tr><td>2</td><td>The men of Yehuda, in Chevron</td></tr>
 <tr><td>3</td><td>The elders of all Israel, in Chevron (Perek 5)</td></tr></table></div>
-<div class="box"><b>Numbers:</b> David was <b>30</b> when he became king and ruled <b>40 years</b>: <b>7 years and 6 months</b> in Chevron over Yehuda, and <b>33 years</b> in Yerushalayim over all Israel and Yehuda.</div>
+<div class="box"><span class="star">★ On the test</span> <b>Facts of David's kingdom:</b> David was <b>30</b> when he became king and ruled <b>40 years</b>: <b>7 years and 6 months</b> in Chevron over Yehuda, and <b>33 years</b> in Yerushalayim over all Israel and Yehuda.</div>
 </div>
-<div class="gsec"><h3><span class="tag t-5">פרק ה</span> Why Yerushalayim?</h3>
+<div class="gsec" id="g-why"><h3><span class="tag t-5">פרק ה</span> Why Yerushalayim?</h3>
 <div class="box">Rabbi Yehuda: 3 mitzvot were given to Bnei Yisrael when they entered the land: <b>(1) appoint a king, (2) wipe out Amalek, (3) build the Beit HaBechirah</b> (Beit HaMikdash). <span class="muted">(Sanhedrin 20b)</span></div>
-<p>David's first order of business is to move his capital to Yerushalayim. Reasons from class:</p>
+<p>David's first order of business is to move his capital from Chevron to Yerushalayim. Reasons from class: <span class="star">★ On the test</span></p>
 <ul>
 <li><b>A city needs water:</b> close to a spring (the Gichon).</li>
 <li><b>Middle of Israel</b>: central.</li>
@@ -231,54 +245,65 @@ p5:`
 </ul>
 <p><b>Takeaway:</b> David was a leader who balanced <b>politics, strategy, and religion</b>.</p>
 </div>
-<div class="gsec"><h3><span class="tag t-5">פרק ה</span> The Yevusim and "the blind and the lame"</h3>
+<div class="gsec" id="g-yevus"><h3><span class="tag t-5">פרק ה</span> The Yevusim and "the blind and the lame"</h3>
 <ul>
-<li><b>Why were the Yevusim still in Yerushalayim?</b> Yehoshua 15: Bnei Yehuda <b>couldn't drive them out</b>, so they lived together. Shoftim 1: Bnei Binyamin <b>never conquered</b> Yevus.</li>
+<li><span class="star">★ On the test</span> <b>Why were the Yevusim still in Yerushalayim?</b> Yehoshua 15: Bnei Yehuda <b>couldn't drive them out</b>, so they lived together. Shoftim 1: Bnei Binyamin <b>never conquered</b> Yevus.</li>
 <li>The Yevusim taunted David: "You won't come in here unless you remove <b>the blind and the lame</b>."</li>
 </ul>
+<h4>Explanations for "לֹא תָבוֹא הֵנָּה כִּי אִם הֱסִירְךָ הַעִוְרִים וְהַפִּסְחִים" <span class="star">★ On the test</span></h4>
 <div class="tbl"><table><tr><th>Mefaresh</th><th>Who were "the blind and the lame"?</th></tr>
 <tr><td><b>Metzudat David</b></td><td>Their <b>idols</b> "guarding" the city: "our gods are too powerful for you." (After the war, David hated the idols, not disabled people.)</td></tr>
 <tr><td><b>Rashi</b></td><td><b>Statues</b> at the city gate representing the <b>pact between Avraham and Avimelech</b>: a blind one for Yitzchak and a lame one for Yaakov. The Yevusim tried to make David feel guilty, but <b>the pact had expired</b>.</td></tr>
 <tr><td><b>Abarbanel</b></td><td>Real <b>blind and disabled soldiers</b> on the walls: "our city is so strong that even they could hold you off."</td></tr></table></div>
 <ul>
 <li>David said whoever strikes the Yevusi and reaches the <b class="he">צִנּוֹר</b> (the water tunnel/pipe up into the fortress) wins.</li>
-<li><b>Divrei HaYamim I 11:</b> whoever strikes first becomes <b>head and general</b>. <b>Yoav ben Tzeruya</b> went up first.</li>
+<li><span class="star">★ On the test</span> <b>How David conquered Yerushalayim:</b> through the tzinor, the water tunnel into the fortress.</li>
+<li><span class="star">★ On the test</span> <b>The parallel story, Divrei HaYamim I 11:</b> whoever strikes first becomes <b>head and general</b>. <b>Yoav ben Tzeruya</b> went up first.</li>
 <li>David captured <b>Metzudat Tzion</b>, which became <b>Ir David</b>. "David kept growing greater, and Hashem was with him."</li>
 </ul></div>
-<div class="gsec"><h3><span class="tag t-5">פרק ה</span> Chiram, family, and two wars with the Plishtim</h3>
+<div class="gsec" id="g-wars"><h3><span class="tag t-5">פרק ה</span> Chiram, family, and two wars with the Plishtim</h3>
 <ul>
 <li><b>Chiram, king of Tzor</b> (Tyre), sent messengers, <b>cedar wood, carpenters and stonemasons</b>, and they built David a palace. David knew Hashem made him king <b>for the sake of His people Israel</b>.</li>
 <li>David took more wives in Yerushalayim and had more children. Why? <b>More heirs to the throne</b>, makes him look <b>more powerful</b>, <b>more soldiers</b>.</li>
 </ul>
+<h4>The 2 wars against the Plishtim <span class="star">★ On the test</span></h4>
 <div class="tbl"><table><tr><th></th><th>War 1</th><th>War 2</th></tr>
 <tr><td>Where</td><td>Plishtim spread out in <b>Emek Refaim</b></td><td>Emek Refaim again</td></tr>
 <tr><td>David asks Hashem</td><td>"Shall I go up? Will You give them into my hand?"</td><td>Asks again</td></tr>
 <tr><td>Hashem answers</td><td>"<b>Go up</b>, I will give them into your hand."</td><td>"<b>Don't go up</b> directly. Circle <b>behind them</b>, by the <b class="he">בְּכָאִים</b> (bushes/trees). When you hear the <b>sound of footsteps in the treetops</b>, move fast: Hashem has gone out before you."</td></tr>
 <tr><td>What happened</td><td><b>Baal Perazim</b>: "Hashem broke through my enemies like water breaking through." The Plishtim left their idols; David's men took them away and <b>burned</b> them.</td><td>David did exactly as Hashem commanded and struck the Plishtim from Geva to Gezer.</td></tr></table></div>
+<h4>David vs. Shaul: asking Hashem's permission <span class="star">★ On the test</span></h4>
+<p style="margin:0">David asked Hashem <b>every time</b> before he went out to war against the Plishtim. This shows <b>David had a strong belief in Hashem</b>.</p>
 <div class="tbl"><table><tr><th>Shaul</th><th>David</th></tr>
 <tr><td>Was told to wait for Shmuel, but <b>brought korbanot without Shmuel</b>.</td><td><b>Asks Hashem first</b> (twice!).</td></tr>
 <tr><td>Was told to wipe out Amalek, but <b>left King Agag and the animals</b>.</td><td><b>Does exactly what Hashem says</b>, even a strange plan.</td></tr></table></div>
 <div class="box"><b>Perek 5 summary:</b> David becomes king over the whole nation · David conquers Yerushalayim · with Hashem's help David beats the Plishtim twice (צמ"ב) · Chiram builds David a palace.</div>
-</div>`,
+</div>
+<div class="gsec" id="g-author"><h3><span class="tag t-5">פרק ה</span> Extra info: Who wrote Sefer Shmuel? <span class="star">★ On the test</span></h3>
+<ul>
+<li><b>Shmuel HaNavi</b> wrote his own sefer <span class="muted">(Bava Batra 14b)</span>.</li>
+<li>Shmuel died in the middle of the story (Shmuel Alef 25), so <b>Gad HaChozeh and Natan HaNavi</b> finished writing it <span class="muted">(Bava Batra 15a)</span>.</li>
+</ul></div>`,
 p6:`
-<div class="gsec"><h3><span class="tag t-6">פרק ו</span> Bringing the Aron: background</h3>
-<ul><li><b>Why did David want the Aron in Yerushalayim?</b> To <b>start the process of building the Beit HaMikdash</b> (mitzvah #3 of the 3 mitzvot).</li></ul>
-<h4>The Aron's journey (Shmuel Alef 4–7)</h4>
+<div class="gsec" id="g-bg"><h3><span class="tag t-6">פרק ו</span> Bringing the Aron: background</h3>
+<ul><li><span class="star">★ On the test</span> <b>Why did David want the Aron in Yerushalayim now?</b> The Gemara (Sanhedrin 20b): Bnei Yisrael had 3 mitzvot when they entered the land: king, Amalek, Beit HaBechirah. To <b>start the process of building the Beit HaMikdash</b> (mitzvah #3 of the 3 mitzvot).</li></ul>
+<h4>Extra info: The Aron's journey (Shmuel Alef 4–7) <span class="star">★ On the test</span></h4>
 <div class="route"><span class="stop">Shiloh</span><span class="arr">→</span><span class="stop">Even HaEzer (war: captured)</span><span class="arr">→</span><span class="stop">Ashdod (Dagon)</span><span class="arr">→</span><span class="stop">Gat</span><span class="arr">→</span><span class="stop">Ekron</span><span class="arr">→</span><span class="stop">Beit Shemesh</span><span class="arr">→</span><span class="stop">Kiryat Ye'arim (house of Avinadav)</span></div>
 <p>The Aron stayed in <b>Kiryat Ye'arim</b> for <b>20 years</b>.</p></div>
-<div class="gsec"><h3><span class="tag t-6">פרק ו</span> The first attempt (pesukim 1–7)</h3>
+<div class="gsec" id="g-first"><h3><span class="tag t-6">פרק ו</span> The first attempt (pesukim 1–7)</h3>
 <ul>
 <li>David gathered <b>30,000</b> men, described as <b class="he">בָּחוּר</b> (chosen). Why so many? With gratitude: <b>the bigger the crowd, the more glory for the King</b>.</li>
 <li>The Aron was in the house of <b>Avinadav</b>. They put it on a <b>new wagon (עֲגָלָה חֲדָשָׁה)</b>; <b>Uzza and Achyo</b> drove it.</li>
 <li>David and all Israel celebrated with all kinds of musical instruments.</li>
 <li>At <b>Goren Nachon</b> the cattle stumbled. <b>Uzza grabbed the Aron</b> because he thought it would fall. Hashem was angry and <b>struck Uzza; he died</b> there next to the Aron.</li>
 </ul>
+<h4>Rashi and Metzudat David <span class="star">★ On the test</span></h4>
 <div class="tbl"><table><tr><th>Mefaresh</th><th>What it teaches</th></tr>
 <tr><td><b>Rashi</b> (3) "אל עגלה חדשה"</td><td>A <b>mistake (טעות) that even little schoolchildren know</b>: "the holy service is upon them, they carry it <b>on the shoulder</b>" (Bamidbar 7:9).</td></tr>
 <tr><td><b>Rashi</b> (7) "על השל"</td><td>An unintentional error (<b class="he">שגגה</b>). He should have reasoned: <b>if the Aron carried its carriers</b> (across the Yarden), surely it can carry itself.</td></tr>
 <tr><td><b>Metzudat David</b> (7) "ויחר"</td><td><b>Lack of faith</b> in Hashem: thinking the Aron could fall.</td></tr>
 <tr><td><b>Metzudat David</b> (7) "על השל"</td><td>He <b>forgot it was the Aron of Hashem</b> and treated it like any other object.</td></tr></table></div>
-<h4>What went wrong (the class list)</h4>
+<h4>The mistakes David and Bnei Yisrael made (the class list) <span class="star">★ On the test</span></h4>
 <ul>
 <li>They put the Aron on a <b>wagon</b>.</li>
 <li>They didn't follow the halacha that the Aron is <b>carried on the shoulders</b>.</li>
@@ -287,7 +312,15 @@ p6:`
 <li>A <b>lack of faith</b> (אמונה) in Hashem.</li>
 </ul>
 <div class="box"><b>Discussion question:</b> Was Uzza's act really a sin? We have a rule: <b class="he">אין סומכין על הנס</b>, "we don't rely on miracles."</div></div>
-<div class="gsec"><h3><span class="tag t-6">פרק ו</span> Oved Edom and the second attempt (pesukim 8–19)</h3>
+<div class="gsec" id="g-resp"><h3><span class="tag t-6">פרק ו</span> Who is responsible: Uzza or David? <span class="star">★ On the test</span></h3>
+<p style="margin:0">Know <b>both sides</b>.</p>
+<div class="tbl"><table><tr><th>Uzza is responsible</th><th>David is responsible</th></tr>
+<tr><td><b>Uzza grabbed</b> the Aron himself. The pasuk says Hashem struck him <b>"על השל"</b>, for his error.</td><td>David was the leader who decided to put the Aron <b>on a wagon</b>. Rashi: a mistake <b>even schoolchildren know</b>.</td></tr>
+<tr><td>Metzudat David: Uzza showed a <b>lack of faith</b>, thinking the Aron could fall, and treated it like an ordinary object.</td><td>The halacha was that only Leviim from <b>Kehat</b> carry the Aron <b>on their shoulders</b>, and that wasn't done.</td></tr>
+<tr><td>Rashi: Uzza should have reasoned that the Aron <b>carries its carriers</b>, so it can carry itself.</td><td>After Uzza died, David <b>fixed the mistakes</b> on the second try, which shows he understood what went wrong.</td></tr></table></div>
+<div class="box">On the other side: <b class="he">אין סומכין על הנס</b>. Maybe Uzza was right not to rely on a miracle?</div></div>
+<div class="gsec" id="g-second"><h3><span class="tag t-6">פרק ו</span> Oved Edom and the second attempt (pesukim 8–19)</h3>
+<p style="margin:0"><span class="star">★ On the test</span> <b>The 2nd try:</b> a proper celebration bringing the Aron to Yerushalayim.</p>
 <ul>
 <li>David was upset and called the place <b>Peretz Uzza</b>. He was <b>afraid of Hashem</b>: "How can the Aron of Hashem come to me?"</li>
 <li>He <b>didn't want</b> to bring it to Ir David yet. The Aron went to the house of <b>Oved Edom HaGitti</b> for <b>3 months</b>, and Hashem <b>blessed</b> Oved Edom and his whole house.</li>
@@ -295,7 +328,8 @@ p6:`
 <li>David <b>danced with all his might</b> before Hashem, wearing a simple <b>linen ephod</b>, with teruah and shofar.</li>
 <li>The Aron was placed in the <b>tent David had set up</b>. He brought olot and shelamim, blessed the people in Hashem's name, and gave every man and woman <b>a loaf of bread, a portion of meat, and a raisin cake</b>.</li>
 </ul></div>
-<div class="gsec"><h3><span class="tag t-6">פרק ו</span> Michal and David (pesukim 16, 20–23)</h3>
+<div class="gsec" id="g-michal"><h3><span class="tag t-6">פרק ו</span> Michal and David (pesukim 16, 20–23) <span class="star">★ On the test</span></h3>
+<div class="box"><b>The phrase "מִיכַל בַּת שָׁאוּל" <span class="star">★ On the test</span></b><br>The pasuk calls her <b>"Michal, daughter of Shaul,"</b> not "David's wife." It points to how she acted <b>like her father's house</b>, caring about the <b>king's honor</b> the way Shaul's family did.</div>
 <ul>
 <li><b>Michal bat Shaul</b> looked out the window, saw David <b>leaping and dancing</b>, and <b>despised him in her heart</b>.</li>
 <li>She said: "How <b>honored</b> was the king of Israel today, exposing himself before the maidservants…" Her tone was <b>sarcastic and angry</b>.</li>
@@ -303,7 +337,7 @@ p6:`
 <li><b>About sarcasm:</b> it often comes from anger and distrust, it can have a <b>really negative effect on relationships</b>, and it can be a <b>defense mechanism</b>.</li>
 <li><b>Did David agree with her?</b> No, he <b>completely disagreed</b>. It was <b>before Hashem, who chose me over your father</b> and his house. "I will be even lowlier, humble in my own eyes."</li>
 </ul>
-<h4>Pasuk 23: "וּלְמִיכַל בַּת שָׁאוּל לֹא הָיָה לָהּ יָלֶד עַד יוֹם מוֹתָהּ"</h4>
+<h4>Possibilities of Michal's punishment <span class="star">★ On the test</span><br>Pasuk 23: "וּלְמִיכַל בַּת שָׁאוּל לֹא הָיָה לָהּ יָלֶד עַד יוֹם מוֹתָהּ"</h4>
 <p>Michal had no child until the day she died. The pasuk is <b>ambiguous</b>: it could mean more than one thing.</p>
 <ul>
 <li><b>1.</b> Michal <b>died in childbirth</b> (she had a child on the day she died).</li>
@@ -311,7 +345,9 @@ p6:`
 <li><b>3.</b> She <b>never had any children</b> her whole life.</li>
 </ul>
 <div class="box"><b>Midrash (Talmud Yerushalmi, Sukkah):</b> "If your father had been more righteous than I, would Hashem have chosen me and rejected your father's house? In your father's house they <b>stood on their own honor</b> instead of the honor of Heaven. I <b>set aside my own honor</b> and stand on the <b>honor of Heaven</b>."</div>
-<div class="tbl"><table><tr><th>Shaul's house (Michal)</th><th>David</th></tr>
+<h4>Point of view (נְקֻדַּת מַבָּט) of David and Michal <span class="star">★ On the test</span></h4>
+<div class="tbl"><table><tr><th>Michal's point of view (Shaul's house)</th><th>David's point of view</th></tr>
+<tr><td>A king should act and dress like a king. David acting like a <b>regular person</b> was a disgrace.</td><td>He was dancing <b>before Hashem</b>, who chose him. Being humble for Hashem is an honor.</td></tr>
 <tr><td>The most important honor was <b>the king's</b>, and the most important opinion was <b>the king's</b>.</td><td><b>Hashem's</b> honor and opinion were what mattered.</td></tr></table></div>
 <div class="box"><b>Think about it:</b> Maybe there's room for a <b>compromise</b> between a king's honor and the honor of Heaven?</div></div>`
 };
@@ -369,6 +405,12 @@ const CARDS=[
 ["p6","What did Shaul's house think was most important? What did David think?","Shaul's house: the <b>king's</b> honor and opinion · David: <b>Hashem's</b> honor and opinion"],
 ["p6","David's answer to Michal","It was <b>before Hashem</b>, who chose me over your father; I'll be even more humble"],
 ["p6","Shaul's house vs David (Midrash)","Shaul's house stood on <b>their own honor</b>; David stands on the <b>honor of Heaven</b>"],
+["p5","Who wrote Sefer Shmuel?","<b>Shmuel</b>, and <b>Gad HaChozeh and Natan HaNavi</b> finished it after he died (Bava Batra 14b–15a)"],
+["p5","How did David conquer Yerushalayim?","Through the <b>tzinor</b>, the water tunnel into the fortress. Yoav went up first."],
+["p5","What does asking Hashem before every war show about David?","He had a <b>strong belief in Hashem</b>"],
+["p6","Who is responsible for what happened to Uzza? (both sides)","<b>Uzza:</b> he grabbed the Aron, lack of faith · <b>David:</b> he put the Aron on a wagon instead of on Leviim's shoulders"],
+["p6","Why is she called \"מיכל בת שאול\" here?","She acted like <b>her father's house</b>, caring about the <b>king's honor</b>"],
+["p6","Michal's point of view vs. David's","Michal: a king should act like a king · David: being humble <b>before Hashem</b> is an honor"],
 ["p6","\"אין סומכין על הנס\"","\"We don't rely on miracles\" (the question about Uzza)"]
 ];
 
@@ -431,6 +473,24 @@ const QUIZ=[
 ["p6","Pasuk 23 is \"ambiguous.\" What does that mean?",["It is missing words","It could mean more than one thing","It is written in Aramaic","It contradicts another pasuk"],1,"Ambiguous = could mean more than one thing."],
 ["p6","Which is NOT one of the 3 possible meanings of pasuk 23?",["Michal died in childbirth","She had a child before, but no more after","She never had children","She had many children later"],3,"The three: died in childbirth · a child before but no more · never had children."],
 ["p6","According to the slide, what did Shaul's house think was most important?",["Hashem's honor","The king's honor and the king's opinion","The people's opinion","The Kohanim's honor"],1,"David, in contrast, cared most about Hashem's honor and opinion."],
+["p5","Who wrote Sefer Shmuel?",["Shmuel, finished by Gad and Natan","David","Eli HaKohen","Yehoshua"],0,"Bava Batra 14b–15a."],
+["p5","Who said to whom: \"הִנְנוּ עַצְמְךָ וּבְשָׂרְךָ אֲנָחְנוּ\"?",["The tribes of Israel to David","David to Chiram","Hashem to David","The Yevusim to David"],0,"\"We are your bone and flesh.\""],
+["p5","Who said to whom: \"לֹא תָבוֹא הֵנָּה כִּי אִם הֱסִירְךָ הַעִוְרִים וְהַפִּסְחִים\"?",["The Plishtim to David","The Yevusim to David","Yoav to David","David to his men"],1,"The Yevusim taunted David."],
+["p5","Who said to whom: \"הַאֶעֱלֶה אֶל פְּלִשְׁתִּים הֲתִתְּנֵם בְּיָדִי\"?",["David to Hashem","Yoav to David","Shaul to Shmuel","Chiram to David"],0,"David asked Hashem before the war."],
+["p5","Who said to whom: \"עֲלֵה כִּי נָתֹן אֶתֵּן אֶת הַפְּלִשְׁתִּים בְּיָדֶךָ\"?",["David to Yoav","Hashem to David","Shmuel to David","The elders to David"],1,"Hashem answered: go up."],
+["p5","Who said \"פָּרַץ ה׳ אֶת אֹיְבַי לְפָנַי כְּפֶרֶץ מָיִם\"?",["Yoav","David","Chiram","Michal"],1,"That's why the place was called Baal Perazim."],
+["p5","Who was \"וַיֵּלֶךְ הָלוֹךְ וְגָדוֹל\" (kept growing greater) said about?",["Shaul","David","Yoav","Chiram"],1,"\"…and Hashem was with him.\""],
+["p5","Who sent \"עֲצֵי אֲרָזִים וְחָרָשֵׁי עֵץ וְחָרָשֵׁי אֶבֶן\" (cedar, carpenters, stonemasons)?",["Avner","Chiram king of Tzor","The Plishtim","The Yevusim"],1,"To build David a palace."],
+["p6","Who said \"אֵיךְ יָבוֹא אֵלַי אֲרוֹן ה׳\"?",["Uzza","Michal","David","Oved Edom"],2,"David was afraid after Uzza died."],
+["p6","Who said to whom: \"מַה נִּכְבַּד הַיּוֹם מֶלֶךְ יִשְׂרָאֵל\"?",["Michal to David","David to Michal","The people to David","Oved Edom to David"],0,"Michal, sarcastically."],
+["p6","Who said to whom: \"לִפְנֵי ה׳ אֲשֶׁר בָּחַר בִּי מֵאָבִיךְ\"?",["Shmuel to Shaul","David to Michal","Michal to David","Hashem to David"],1,"David answered Michal."],
+["p6","Who was \"וַתִּבֶז לוֹ בְּלִבָּהּ\" (despised him in her heart) said about?",["Michal","Avigayil","Bat Sheva","Chana"],0,"When she saw David dancing."],
+["p6","Who was \"וַיַּךְ שָׁם הָאֱלֹקִים עַל הַשַּׁל\" said about?",["Achyo","Uzza","Avinadav","Oved Edom"],1,"Hashem struck Uzza for his error."],
+["p6","Who was \"וַיְבָרֶךְ ה׳ אֶת... וְאֶת כָּל בֵּיתוֹ\" said about?",["Avinadav","Oved Edom HaGitti","David","Uzza"],1,"His house was blessed because of the Aron."],
+["p6","\"מְכַרְכֵּר בְּכָל עֹז\" (dancing with all his might) is said about…",["Michal","David","The Leviim","Uzza"],1,"David danced before Hashem."],
+["p6","Who were described as \"בָּחוּר\" (chosen)?",["The Leviim","The 30,000 men David gathered","The Plishtim","Michal's servants"],1,"David gathered 30,000 chosen men."],
+["p6","One side says David is responsible for what happened to Uzza. Why?",["David grabbed the Aron","David decided to put the Aron on a wagon","David told Uzza to touch it","David wasn't there"],1,"The Aron should have been carried on Leviim's shoulders."],
+["p6","Why does the pasuk call her \"מיכל בת שאול\" in this story?",["She was angry at Shaul","She acted like her father's house, caring about the king's honor","She had moved back to Shaul's house","It's her full legal name"],1,"Shaul's house stood on its own honor."],
 ["p6","\"אין סומכין על הנס\" means…",["Miracles don't happen","We don't rely on miracles","Only Neviim see miracles","Miracles are for the Aron"],1,"The question raised: maybe Uzza was right to grab it?"]
 ];
 
@@ -448,6 +508,8 @@ intro:{title:"Match the number",pairs:[["48","Neviim written in Tanach"],["200",
 p5:{title:"Match the mefaresh / person",pairs:[["Metzudat David","The blind and lame = idols"],["Rashi","The blind and lame = statues of the Avraham–Avimelech pact"],["Abarbanel","The blind and lame = real disabled soldiers"],["Yoav","First up the tzinor, became general"],["Chiram","Sent cedar and builders from Tzor"],["Elders of Israel","Anointed David in Chevron"]]},
 p5n:{unit:"p5",title:"Match the numbers of Perek 5",pairs:[["30","David's age when he became king"],["40","Total years David ruled"],["7½","Years in Chevron"],["33","Years in Yerushalayim"],["3","Mitzvot when entering the land"]]},
 p6:{title:"Match the person / place",pairs:[["Uzza","Grabbed the Aron and died"],["Achyo","Drove the wagon with Uzza"],["Oved Edom","Hosted the Aron 3 months and was blessed"],["Michal","Despised David for dancing"],["Avinadav","The Aron was in his house in Kiryat Ye'arim"],["Bnei Kehat","Should carry the Aron on their shoulders"]]},
+p5ws:{unit:"p5",title:"Who said it? (Perek 5)",pairs:[["הִנְנוּ עַצְמְךָ וּבְשָׂרְךָ אֲנָחְנוּ","The tribes → David"],["לֹא תָבוֹא הֵנָּה כִּי אִם הֱסִירְךָ הַעִוְרִים","The Yevusim → David"],["הַאֶעֱלֶה אֶל פְּלִשְׁתִּים","David → Hashem"],["עֲלֵה כִּי נָתֹן אֶתֵּן","Hashem → David"],["פָּרַץ ה׳ אֶת אֹיְבַי לְפָנַי","David, at Baal Perazim"]]},
+p6ws:{unit:"p6",title:"Who said it / about whom? (Perek 6)",pairs:[["אֵיךְ יָבוֹא אֵלַי אֲרוֹן ה׳","David, after Uzza died"],["מַה נִּכְבַּד הַיּוֹם מֶלֶךְ יִשְׂרָאֵל","Michal → David"],["לִפְנֵי ה׳ אֲשֶׁר בָּחַר בִּי מֵאָבִיךְ","David → Michal"],["וַיַּךְ שָׁם הָאֱלֹקִים עַל הַשַּׁל","About Uzza"],["וַתִּבֶז לוֹ בְּלִבָּהּ","About Michal"],["וַיְבָרֶךְ ה׳ אֶת כָּל בֵּיתוֹ","About Oved Edom"]]},
 p6m:{unit:"p6",title:"Match: Michal and David",pairs:[["Sarcastic, angry","Michal's tone of voice"],["Acting like a regular person","Why Michal was angry"],["Completely disagreed","David's reaction to Michal"],["The king's honor","What Shaul's house cared about most"],["Hashem's honor","What David cared about most"],["Ambiguous","Pasuk 23: could mean more than one thing"]]},
 p6n:{unit:"p6",title:"Match the numbers of Perek 6",pairs:[["30,000","Men David gathered"],["20 years","Aron in Kiryat Ye'arim"],["3 months","Aron with Oved Edom"],["6 steps","Then an ox and a fattened animal"]]}
 };
@@ -475,7 +537,7 @@ const tag=u=>`<span class="tag ${UNITS[u].cls}">${UNITS[u].name}</span>`;
 function renderPickers(){
   const units=[["all","All three","var(--ink)"]].concat(Object.entries(UNITS).map(([k,v])=>[k,v.name+" · "+v.he,v.color]));
   $("#units").innerHTML=units.map(([k,n,c])=>`<button class="chip" id="u-${k}" aria-pressed="${S.unit===k}" data-u="${k}"><span class="dot" style="background:${c}"></span>${n}</button>`).join("");
-  const modes=[["guide","Study Guide","Read the notes from the slides"],["arcade","Arcade","3 arcade games powered by your answers"],["cards","Flashcards","Flip, then mark Got it / Again"],["quiz","Quiz Game","Multiple choice. Streaks = bonus XP"],["order","Put in Order","Arrange events and the Aron's journey"],["match","Match Up","Pair people, mefarshim and numbers"]];
+  const modes=[["guide","Study Guide","Read the notes from the slides"],["arcade","Arcade","6 arcade games powered by your answers"],["cards","Flashcards","Flip, then mark Got it / Again"],["quiz","Quiz Game","Multiple choice. Streaks = bonus XP"],["order","Put in Order","Arrange events and the Aron's journey"],["match","Match Up","Pair people, mefarshim and numbers"]];
   $("#modes").innerHTML=modes.map(([k,n,d])=>`<button class="mode" id="m-${k}" aria-pressed="${S.mode===k}" data-m="${k}"><b>${n}</b><small>${d}</small>${S.best[k+S.unit]!=null?`<span class="best">Best: ${S.best[k+S.unit]}</span>`:""}</button>`).join("");
 }
 document.addEventListener("click",e=>{
@@ -488,10 +550,23 @@ function setBest(key,val){const k=key+S.unit;if(S.best[k]==null||val>S.best[k]){
 /* ---------------- MODES ---------------- */
 function start(){arcStop();({guide,cards,quiz,order,match,arcade})[S.mode]()}
 
+const CHECK={p5:[["Bnei Yisrael appointed David as their king","g-king"],["Facts of David's kingdom","g-king"],["David conquered Yerushalayim from the Yevusim and lived there","g-yevus"],["Chiram king of Tzor sent materials and workers to build David a palace","g-wars"],["The 2 wars against the Plishtim","g-wars"],["Extra info: who wrote Sefer Shmuel","g-author"],["All the times David was anointed king","g-king"],["Reasons David moved his capital from Chevron to Yerushalayim","g-why"],["History from Yehoshua and Shoftim: why the Yevusim were still in Yerushalayim","g-yevus"],["Explanations for \"the blind and the lame\" (Rashi, Metzudat David, Abarbanel)","g-yevus"],["The parallel story in Divrei HaYamim","g-yevus"],["How David conquered Yerushalayim","g-yevus"],["David vs. Shaul: asking Hashem before each war","g-wars"],["David had a strong belief in Hashem","g-wars"]],
+p6:[["David's 1st try at bringing the Aron","g-first"],["Uzza and the Aron","g-first"],["The 2nd try: the celebration bringing the Aron","g-second"],["The conversation between David and Michal","g-michal"],["Extra info: the Aron's journey","g-bg"],["Why bring the Aron now (Gemara: 3 mitzvot)","g-bg"],["The mistakes David and Bnei Yisrael made the first time","g-first"],["Rashi and Metzudat David on the Aron story","g-first"],["Who is responsible: Uzza or David? (both sides)","g-resp"],["The phrase \"מיכל בת שאול\"","g-michal"],["Point of view of David and Michal","g-michal"],["Possibilities of Michal's punishment","g-michal"]]};
+let CKS={};try{CKS=JSON.parse(localStorage.getItem("sbq-ck")||"{}")}catch(e){}
+function checklist(keys){
+  const ks=keys.filter(k=>CHECK[k]);if(!ks.length)return "";
+  return `<div class="testbox"><h3>Test checklist: פרקים ה–ו</h3>
+  <p style="margin:0">From the teacher's study guide. Check each one off when you know it. Tap <b>Review</b> to jump to it. Everything marked <span class="star">★ On the test</span> below is on this list.</p>
+  <div class="ckcols">${ks.map(k=>`<div class="ckcol"><h4>${UNITS[k].he} · ${UNITS[k].name}</h4>${CHECK[k].map(([t,id],n)=>{const key=k+n;return `<div class="ck${CKS[key]?" done":""}"><input type="checkbox" id="ck-${key}" data-ck="${key}"${CKS[key]?" checked":""}><label for="ck-${key}">${t}</label><button class="go" data-go="${id}">Review</button></div>`}).join("")}</div>`).join("")}</div>
+  <div><b>Parts of the test:</b></div><div class="fmt"><span>1. Who said to whom? (מי אמר למי)</span><span>2. Who or what was it said about? (על מי או על מה נאמר)</span><span>3. Questions</span><span>4. Matching</span></div>
+  <div><b>How to prepare:</b> read all the pesukim (with English if needed), review our class slides, and use this checklist to make sure you know everything. Practice parts 1–2 with the <b>Who Said It?</b> sets in Match Up and the Quiz.</div></div>`;
+}
 function guide(){
   const keys=S.unit==="all"?["intro","p5","p6"]:[S.unit];
-  $("#stage").innerHTML=`<div class="guide">${keys.map(k=>GUIDE[k]).join("")}</div>
+  $("#stage").innerHTML=`<div class="guide">${checklist(keys)}${keys.map(k=>GUIDE[k]).join("")}</div>
   <div class="row" style="margin-top:20px"><button class="btn gold" data-m="quiz">I'm ready: start the Quiz</button><button class="btn ghost" data-m="cards">Try Flashcards</button></div>`;
+  $("#stage").querySelectorAll("[data-ck]").forEach(b=>b.onchange=()=>{CKS[b.dataset.ck]=b.checked;b.parentElement.classList.toggle("done",b.checked);try{localStorage.setItem("sbq-ck",JSON.stringify(CKS))}catch(e){}});
+  $("#stage").querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{const t=document.getElementById(b.dataset.go);if(t)t.scrollIntoView({behavior:"smooth",block:"start"})});
 }
 
 function cards(){
