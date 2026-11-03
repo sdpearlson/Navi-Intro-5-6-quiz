@@ -147,6 +147,7 @@ th{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--mu
 .ebar{display:inline-block;width:70px;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
 .ebar i{display:block;height:100%;background:var(--gold);transition:width .15s}
 .ctl{font-size:.85rem;margin:8px 0 0}
+.qban{position:absolute;left:0;right:0;top:0;padding:10px 12px;background:rgba(11,18,34,.94);color:#EEF2F8;font-weight:500;font-size:1rem;line-height:1.35;pointer-events:none;display:grid;gap:4px;justify-items:start;border-bottom:1px solid #2E3D5C}
 @media (max-width:520px){.mgrid{grid-template-columns:1fr}.stage{padding:16px}.fcard{height:300px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -297,11 +298,22 @@ p6:`
 <div class="gsec"><h3><span class="tag t-6">פרק ו</span> Michal and David (pesukim 16, 20–23)</h3>
 <ul>
 <li><b>Michal bat Shaul</b> looked out the window, saw David <b>leaping and dancing</b>, and <b>despised him in her heart</b>.</li>
-<li>She said: "How <b>honored</b> was the king of Israel today, exposing himself before the maidservants…" Her tone was <b>sarcastic</b>. Sarcasm often comes from <b>anger and distrust</b>.</li>
-<li>David answered: it was <b>before Hashem, who chose me over your father</b> and his house. "I will be even lowlier, humble in my own eyes."</li>
-<li>Michal had <b>no children</b> until the day she died.</li>
+<li>She said: "How <b>honored</b> was the king of Israel today, exposing himself before the maidservants…" Her tone was <b>sarcastic and angry</b>.</li>
+<li><b>Why was she so angry?</b> David was <b>acting like a regular person</b> and was <b>dressed simply</b>, not like a king.</li>
+<li><b>About sarcasm:</b> it often comes from anger and distrust, it can have a <b>really negative effect on relationships</b>, and it can be a <b>defense mechanism</b>.</li>
+<li><b>Did David agree with her?</b> No, he <b>completely disagreed</b>. It was <b>before Hashem, who chose me over your father</b> and his house. "I will be even lowlier, humble in my own eyes."</li>
 </ul>
-<div class="box"><b>Midrash (Yerushalmi Sukkah):</b> David told Michal that in her father's house they <b>stood on their own honor</b>; David <b>sets aside his own honor for the honor of Heaven</b>.</div></div>`
+<h4>Pasuk 23: "וּלְמִיכַל בַּת שָׁאוּל לֹא הָיָה לָהּ יָלֶד עַד יוֹם מוֹתָהּ"</h4>
+<p>Michal had no child until the day she died. The pasuk is <b>ambiguous</b>: it could mean more than one thing.</p>
+<ul>
+<li><b>1.</b> Michal <b>died in childbirth</b> (she had a child on the day she died).</li>
+<li><b>2.</b> She <b>had a child before this</b>, but <b>no more children</b> were born to her afterward.</li>
+<li><b>3.</b> She <b>never had any children</b> her whole life.</li>
+</ul>
+<div class="box"><b>Midrash (Talmud Yerushalmi, Sukkah):</b> "If your father had been more righteous than I, would Hashem have chosen me and rejected your father's house? In your father's house they <b>stood on their own honor</b> instead of the honor of Heaven. I <b>set aside my own honor</b> and stand on the <b>honor of Heaven</b>."</div>
+<div class="tbl"><table><tr><th>Shaul's house (Michal)</th><th>David</th></tr>
+<tr><td>The most important honor was <b>the king's</b>, and the most important opinion was <b>the king's</b>.</td><td><b>Hashem's</b> honor and opinion were what mattered.</td></tr></table></div>
+<div class="box"><b>Think about it:</b> Maybe there's room for a <b>compromise</b> between a king's honor and the honor of Heaven?</div></div>`
 };
 
 /* Flashcards: [unit, front, back] */
@@ -349,7 +361,12 @@ const CARDS=[
 ["p6","What did David wear while dancing?","A simple <b>linen ephod</b>"],
 ["p6","What did David give each person?","A <b>loaf of bread</b>, a <b>portion of meat</b>, a <b>raisin cake</b>"],
 ["p6","What did Michal see, and how did she feel?","David <b>leaping and dancing</b>; she <b>despised him</b> in her heart"],
-["p6","Michal's tone of voice","<b>Sarcastic</b> (comes from anger)"],
+["p6","Michal's tone of voice","<b>Sarcastic and angry</b>"],
+["p6","Why was Michal so angry?","David was <b>acting like a regular person</b> and <b>dressed simply</b>"],
+["p6","Did David agree with Michal?","No, he <b>completely disagreed</b>"],
+["p6","What can sarcasm do?","Have a <b>really negative effect on relationships</b>; it can be a <b>defense mechanism</b>"],
+["p6","Why is pasuk 23 (Michal had no child until her death) called ambiguous?","It could mean more than one thing: 1. she <b>died in childbirth</b> · 2. she had a child <b>before</b>, but <b>no more</b> after · 3. she <b>never</b> had children"],
+["p6","What did Shaul's house think was most important? What did David think?","Shaul's house: the <b>king's</b> honor and opinion · David: <b>Hashem's</b> honor and opinion"],
 ["p6","David's answer to Michal","It was <b>before Hashem</b>, who chose me over your father; I'll be even more humble"],
 ["p6","Shaul's house vs David (Midrash)","Shaul's house stood on <b>their own honor</b>; David stands on the <b>honor of Heaven</b>"],
 ["p6","\"אין סומכין על הנס\"","\"We don't rely on miracles\" (the question about Uzza)"]
@@ -408,6 +425,12 @@ const QUIZ=[
 ["p6","How did David answer Michal?",["He apologized","It was before Hashem, who chose me over your father","He ignored her","He agreed with her"],1,"And he'd be even more humble."],
 ["p6","According to the Midrash, what was the difference between Shaul's house and David?",["Shaul's house was richer","Shaul's house stood on their own honor; David on the honor of Heaven","David was taller","Shaul danced more"],1,"David sets his own honor aside for Hashem's."],
 ["p6","What happened to Michal at the end of the perek?",["She became queen","She had no children until her death","She moved to Chevron","She apologized"],1,"Pasuk 23."],
+["p6","Why was Michal so angry at David?",["He came home late","He was acting like a regular person and dressed simply","He forgot the Aron","He didn't invite her"],1,"She thought a king should act and dress like a king."],
+["p6","Did David agree with Michal's observation?",["Yes, completely","Partly","No, he completely disagreed","He didn't answer"],2,"He danced before Hashem, who chose him over Shaul's house."],
+["p6","Which is true about sarcasm, from our class discussion?",["It always makes people closer","It can hurt relationships and can be a defense mechanism","It is only used as a joke","It shows respect"],1,"Sarcasm can have a really negative effect on relationships."],
+["p6","Pasuk 23 is \"ambiguous.\" What does that mean?",["It is missing words","It could mean more than one thing","It is written in Aramaic","It contradicts another pasuk"],1,"Ambiguous = could mean more than one thing."],
+["p6","Which is NOT one of the 3 possible meanings of pasuk 23?",["Michal died in childbirth","She had a child before, but no more after","She never had children","She had many children later"],3,"The three: died in childbirth · a child before but no more · never had children."],
+["p6","According to the slide, what did Shaul's house think was most important?",["Hashem's honor","The king's honor and the king's opinion","The people's opinion","The Kohanim's honor"],1,"David, in contrast, cared most about Hashem's honor and opinion."],
 ["p6","\"אין סומכין על הנס\" means…",["Miracles don't happen","We don't rely on miracles","Only Neviim see miracles","Miracles are for the Aron"],1,"The question raised: maybe Uzza was right to grab it?"]
 ];
 
@@ -416,7 +439,7 @@ const SEQS={
 intro:{title:"Order the Gemara's argument",items:["Elkanah was from \"Ramatayim Tzofim\"","So he was one of 200 Neviim in his time","There were really double the number who left Mitzrayim","But only 48 are written in Tanach","Only nevuah needed for future generations was written","So every Tanach story has meaning for us today"]},
 p5:{title:"Order the events of Perek 5",items:["All the tribes come to David in Chevron","The elders anoint David king over all Israel","David conquers the Yevusim in Yerushalayim","Chiram king of Tzor builds David a palace","David has more wives and children in Yerushalayim","Hashem says \"Go up\": victory at Baal Perazim","Hashem says \"Go behind them, by the bushes\": second victory"]},
 p6:{title:"Order the Aron's journey (Shmuel Alef 4–7 → Perek 6)",items:["Shiloh","Even HaEzer (captured in war)","Ashdod (temple of Dagon)","Gat","Ekron","Beit Shemesh","Kiryat Ye'arim (house of Avinadav)","House of Oved Edom HaGitti","Ir David, Yerushalayim"]},
-p6b:{unit:"p6",title:"Order the events of Perek 6",items:["David gathers 30,000 chosen men","The Aron is put on a new wagon","The cattle stumble and Uzza grabs the Aron","Hashem strikes Uzza","The Aron stays 3 months with Oved Edom","David brings the Aron up with offerings every 6 steps","Michal sees David dancing and despises him","David gives everyone bread, meat and a raisin cake","Michal and David argue"]}
+p6b:{unit:"p6",title:"Order the events of Perek 6",items:["David gathers 30,000 chosen men","The Aron is put on a new wagon","The cattle stumble and Uzza grabs the Aron","Hashem strikes Uzza","The Aron stays 3 months with Oved Edom","David brings the Aron up with offerings every 6 steps","Michal sees David dancing and despises him","David gives everyone bread, meat and a raisin cake","Michal and David argue","Michal has no child until the day of her death"]}
 };
 
 /* Matching sets */
@@ -425,6 +448,7 @@ intro:{title:"Match the number",pairs:[["48","Neviim written in Tanach"],["200",
 p5:{title:"Match the mefaresh / person",pairs:[["Metzudat David","The blind and lame = idols"],["Rashi","The blind and lame = statues of the Avraham–Avimelech pact"],["Abarbanel","The blind and lame = real disabled soldiers"],["Yoav","First up the tzinor, became general"],["Chiram","Sent cedar and builders from Tzor"],["Elders of Israel","Anointed David in Chevron"]]},
 p5n:{unit:"p5",title:"Match the numbers of Perek 5",pairs:[["30","David's age when he became king"],["40","Total years David ruled"],["7½","Years in Chevron"],["33","Years in Yerushalayim"],["3","Mitzvot when entering the land"]]},
 p6:{title:"Match the person / place",pairs:[["Uzza","Grabbed the Aron and died"],["Achyo","Drove the wagon with Uzza"],["Oved Edom","Hosted the Aron 3 months and was blessed"],["Michal","Despised David for dancing"],["Avinadav","The Aron was in his house in Kiryat Ye'arim"],["Bnei Kehat","Should carry the Aron on their shoulders"]]},
+p6m:{unit:"p6",title:"Match: Michal and David",pairs:[["Sarcastic, angry","Michal's tone of voice"],["Acting like a regular person","Why Michal was angry"],["Completely disagreed","David's reaction to Michal"],["The king's honor","What Shaul's house cared about most"],["Hashem's honor","What David cared about most"],["Ambiguous","Pasuk 23: could mean more than one thing"]]},
 p6n:{unit:"p6",title:"Match the numbers of Perek 6",pairs:[["30,000","Men David gathered"],["20 years","Aron in Kiryat Ye'arim"],["3 months","Aron with Oved Edom"],["6 steps","Then an ox and a fattened animal"]]}
 };
 
@@ -575,10 +599,17 @@ const ICONS={
 wall:`<svg width="120" height="70" viewBox="0 0 120 70"><rect x="10" y="40" width="100" height="26" fill="#C9B48A"/><g fill="#C9B48A"><rect x="10" y="32" width="12" height="10"/><rect x="32" y="32" width="12" height="10"/><rect x="54" y="32" width="12" height="10"/><rect x="76" y="32" width="12" height="10"/><rect x="98" y="32" width="12" height="10"/></g><circle cx="60" cy="14" r="4" fill="#E8B84A"/><circle cx="30" cy="8" r="6" fill="#C8553D"/><circle cx="92" cy="14" r="6" fill="#C8553D"/></svg>`,
 tzinor:`<svg width="120" height="70" viewBox="0 0 120 70"><rect x="20" y="0" width="22" height="24" fill="#7A6548"/><rect x="20" y="48" width="22" height="22" fill="#7A6548"/><rect x="78" y="0" width="22" height="12" fill="#7A6548"/><rect x="78" y="38" width="22" height="32" fill="#7A6548"/><circle cx="58" cy="34" r="8" fill="#5BB8EE"/><path d="M0 66 Q15 60 30 66 T60 66 T90 66 T120 66 V70 H0Z" fill="#1B7FB8"/></svg>`,
 perazim:`<svg width="120" height="70" viewBox="0 0 120 70"><g fill="#C07A3A"><rect x="8" y="8" width="30" height="12"/><rect x="45" y="8" width="30" height="12"/><rect x="82" y="8" width="30" height="12"/><rect x="8" y="24" width="30" height="12"/><rect x="82" y="24" width="30" height="12"/></g><rect x="45" y="24" width="30" height="12" fill="#E8B84A"/><circle cx="66" cy="48" r="5" fill="#EEF2F8"/><rect x="40" y="60" width="40" height="6" rx="3" fill="#5BB8EE"/></svg>`};
+Object.assign(ICONS,{
+blocks:`<svg width="120" height="70" viewBox="0 0 120 70"><g stroke="#0B1222" stroke-width="2"><rect x="30" y="10" width="14" height="14" fill="#E8B84A"/><rect x="44" y="10" width="14" height="14" fill="#E8B84A"/><rect x="44" y="24" width="14" height="14" fill="#E8B84A"/><rect x="62" y="24" width="14" height="14" fill="#5BB8EE"/><rect x="76" y="24" width="14" height="14" fill="#5BB8EE"/><rect x="30" y="42" width="14" height="14" fill="#C8553D"/><rect x="44" y="42" width="14" height="14" fill="#C8553D"/><rect x="58" y="42" width="14" height="14" fill="#C8553D"/><rect x="72" y="42" width="14" height="14" fill="#4CC583"/><rect x="86" y="42" width="14" height="14" fill="#4CC583"/></g></svg>`,
+snake:`<svg width="120" height="70" viewBox="0 0 120 70"><g fill="#5BB8EE"><rect x="14" y="40" width="14" height="14" rx="4"/><rect x="30" y="40" width="14" height="14" rx="4"/><rect x="46" y="40" width="14" height="14" rx="4"/><rect x="46" y="24" width="14" height="14" rx="4"/></g><rect x="62" y="24" width="14" height="14" rx="4" fill="#E8B84A"/><circle cx="98" cy="31" r="6" fill="#4CC583"/></svg>`,
+rain:`<svg width="120" height="70" viewBox="0 0 120 70"><g fill="#22304D" stroke="#5BB8EE"><rect x="6" y="8" width="24" height="16" rx="3"/><rect x="34" y="8" width="24" height="16" rx="3"/><rect x="62" y="8" width="24" height="16" rx="3"/><rect x="90" y="8" width="24" height="16" rx="3"/></g><rect x="62" y="8" width="24" height="16" rx="3" fill="#4CC583"/><path d="M62 52 h24 l-4 12 h-16z" fill="#E8B84A"/></svg>`});
 const GAMES=[
 {id:"wall",name:"Defend Yerushalayim",desc:"Sling stones at the Plishtim marching on the wall. Out of stones? Answer to reload.",ctl:"Move: drag on the screen, or ← → / A D. Your sling fires by itself while you have energy. Catch golden scrolls for a Baal Perazim blast.",run:gameWall},
 {id:"tzinor",name:"Tzinor Climb",desc:"Fly Yoav through the water tunnel into the fortress. Crash? A right answer revives you.",ctl:"Flap: tap the screen, or press Space / ↑. Up to 5 revives per run.",run:gameTzinor},
-{id:"perazim",name:"Baal Perazim Breakout",desc:"Break through the Plishtim's idols like water. Lose the ball? Answer to keep your heart.",ctl:"Move: drag, or ← → / A D. Launch: tap or Space. Gold ? bricks give a power-up question.",run:gameBreak}];
+{id:"perazim",name:"Baal Perazim Breakout",desc:"Break through the Plishtim's idols like water. Lose the ball? Answer to keep your heart.",ctl:"Move: drag, or ← → / A D. Launch: tap or Space. Gold ? bricks give a power-up question.",run:gameBreak},
+{id:"blocks",name:"Stone Builder",desc:"A block-blast puzzle with Chiram's building stones. Fill rows and columns to clear them. A new tray of stones means a new question.",ctl:"Drag a stone from the tray onto the board. Fill a full row or column to clear it. Stuck? Answer to clear space (3 revives).",run:gameBlocks},
+{id:"snake",name:"Gather the 30,000",desc:"Lead David's procession and gather the chosen men. Grab golden scrolls for bonus questions. Crash? Answer to keep going.",ctl:"Steer: arrow keys / WASD, swipe, or tap where you want to go. Golden scrolls give +50 for a right answer.",run:gameSnake},
+{id:"rain",name:"Answer Rain",desc:"Four answers fall from the sky. Slide under the right one before it lands. Speeds up as you go.",ctl:"Move: ← → / A D, or tap a lane. Hold ↓ / S to drop faster. 3 hearts.",run:gameRain}];
 function arcade(){
   const src=S.unit==="all"?"all three units":UNITS[S.unit].name;
   $("#stage").innerHTML=`<h3 style="font-size:1.5rem">Arcade</h3><p class="muted" style="margin:4px 0 0">Every game runs on what you know. Questions come from ${src}. Right answers refill energy, revive you, and power you up.</p>
@@ -748,6 +779,152 @@ function gameBreak(g){
     drawParts(G);
   }
   hud();loop(G,update,draw);startScreen(G,"Break through the idols like water bursting through! If the ball falls, answer a question to keep your heart. Gold ? bricks give power-ups.");
+}
+
+/* Game 4: Stone Builder (block blast) */
+const SHAPES=[[[0,0]],[[0,0],[0,1]],[[0,0],[1,0]],[[0,0],[0,1],[0,2]],[[0,0],[1,0],[2,0]],[[0,0],[0,1],[0,2],[0,3]],[[0,0],[1,0],[2,0],[3,0]],[[0,0],[0,1],[0,2],[0,3],[0,4]],[[0,0],[1,0],[2,0],[3,0],[4,0]],[[0,0],[0,1],[1,0],[1,1]],[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]],[[0,0],[1,0],[1,1]],[[0,1],[1,0],[1,1]],[[0,0],[0,1],[1,0]],[[0,0],[0,1],[1,1]],[[0,0],[1,0],[2,0],[2,1]],[[0,1],[1,1],[2,1],[2,0]],[[0,0],[0,1],[0,2],[1,1]],[[0,1],[1,0],[1,1],[1,2]],[[0,0],[0,1],[1,1],[1,2]],[[0,1],[0,2],[1,0],[1,1]],[[0,0],[0,1],[0,2],[1,0]],[[0,0],[1,0],[1,1],[1,2]]];
+const STONE=["#E8B84A","#5BB8EE","#C8553D","#4CC583","#A58CF5","#F2A257"];
+function stoneCell(ctx,x,y,s,col){ctx.fillStyle=col;ctx.fillRect(x+1,y+1,s-2,s-2);const t=Math.max(2,s*.16);ctx.fillStyle="rgba(255,255,255,.25)";ctx.fillRect(x+1,y+1,s-2,t);ctx.fillStyle="rgba(0,0,0,.2)";ctx.fillRect(x+1,y+s-1-t,s-2,t)}
+function gameBlocks(g){
+  const G=arena(g,`<span>Score <b id="hs">0</b></span><span>Lines <b id="hn">0</b></span><span>Revives left <b id="hr">3</b></span>`);
+  const N=8,cs=Math.floor(Math.min((G.W-24)/N,(G.H-150)/N)),gx=Math.round((G.W-cs*N)/2),gy=14,ty=gy+cs*N+14,slotW=G.W/3,ts=Math.min(cs*.55,(slotW-16)/5);
+  Object.assign(G,{grid:Array.from({length:N},()=>Array(N).fill(null)),tray:[],drag:null,lines:0,revives:0});
+  const hud=()=>{$("#hs").textContent=G.score;$("#hn").textContent=G.lines;$("#hr").textContent=3-G.revives};
+  const dims=s=>[Math.max(...s.map(p=>p[0]))+1,Math.max(...s.map(p=>p[1]))+1];
+  const newPiece=()=>({s:SHAPES[Math.floor(Math.random()*SHAPES.length)],col:STONE[Math.floor(Math.random()*STONE.length)]});
+  const fits=(s,r,c)=>s.every(([a,b])=>r+a>=0&&r+a<N&&c+b>=0&&c+b<N&&!G.grid[r+a][c+b]);
+  const fitsAnywhere=p=>{for(let r=0;r<N;r++)for(let c=0;c<N;c++)if(fits(p.s,r,c))return true;return false};
+  const refill=()=>{G.tray=[newPiece(),newPiece(),newPiece()]};
+  refill();
+  function checkStuck(){
+    if(G.tray.some(p=>p&&fitsAnywhere(p)))return;
+    if(G.revives>=3){gameOver(G);return}
+    askQ(G,"No room left!",`Answer correctly to clear space (${3-G.revives} revives left).`,ok=>{
+      if(!ok){gameOver(G);return}
+      G.revives++;
+      const rs=[...Array(N).keys()].sort((a,b)=>G.grid[b].filter(Boolean).length-G.grid[a].filter(Boolean).length).slice(0,3);
+      rs.forEach(r=>{for(let c=0;c<N;c++){if(G.grid[r][c])burst(G,gx+c*cs+cs/2,gy+r*cs+cs/2,G.grid[r][c],3);G.grid[r][c]=null}});
+      hud();toast("Space cleared!");checkStuck()});
+  }
+  function place(i,r,c){
+    const p=G.tray[i];p.s.forEach(([a,b])=>G.grid[r+a][c+b]=p.col);G.score+=p.s.length;G.tray[i]=null;
+    const rows=[],cols=[];for(let k=0;k<N;k++){if(G.grid[k].every(Boolean))rows.push(k);if(G.grid.every(row=>row[k]))cols.push(k)}
+    rows.forEach(k=>{for(let j=0;j<N;j++)burst(G,gx+j*cs+cs/2,gy+k*cs+cs/2,G.grid[k][j]||"#EEF2F8",3)});
+    cols.forEach(k=>{for(let j=0;j<N;j++)burst(G,gx+k*cs+cs/2,gy+j*cs+cs/2,G.grid[j][k]||"#EEF2F8",3)});
+    rows.forEach(k=>{for(let j=0;j<N;j++)G.grid[k][j]=null});cols.forEach(k=>{for(let j=0;j<N;j++)G.grid[j][k]=null});
+    const n=rows.length+cols.length;if(n){G.lines+=n;const pts=10*n*n;G.score+=pts;toast(n>1?`${n} lines! +${pts}`:`Line cleared! +${pts}`)}
+    hud();
+    if(G.tray.every(x=>!x))askQ(G,"New stones from Chiram!","Answer correctly for a +50 bonus.",ok=>{if(ok){G.score+=50;toast("+50 bonus")}refill();hud();checkStuck()});
+    else checkStuck();
+  }
+  const pos=e=>{const b=G.cv.getBoundingClientRect();return [(e.clientX-b.left)*G.W/b.width,(e.clientY-b.top)*G.H/b.height]};
+  const lift=e=>e&&e.pointerType==="mouse"?0:30;
+  function ghost(){const d=G.drag;if(!d)return null;const [h,w]=dims(d.p.s);const tlx=d.x-w*cs/2,tly=d.y-h*cs/2-d.lift;const c=Math.round((tlx-gx)/cs),r=Math.round((tly-gy)/cs);return {r,c,ok:fits(d.p.s,r,c),tlx,tly}}
+  G.cv.onpointerdown=e=>{if(!G.started||G.paused||G.over)return;const [x,y]=pos(e);if(y<ty-8)return;const i=Math.min(2,Math.floor(x/slotW));if(!G.tray[i])return;G.drag={i,p:G.tray[i],x,y,lift:lift(e)};try{G.cv.setPointerCapture(e.pointerId)}catch(_){} };
+  G.cv.onpointermove=e=>{if(G.drag){const [x,y]=pos(e);G.drag.x=x;G.drag.y=y}};
+  G.cv.onpointerup=e=>{const gh=ghost(),d=G.drag;G.drag=null;if(gh&&gh.ok&&!G.paused&&!G.over)place(d.i,gh.r,gh.c)};
+  G.cv.onpointercancel=()=>{G.drag=null};
+  function draw(){
+    const ctx=G.ctx;sky(G,"#0B1222","#1B2440");
+    ctx.fillStyle="#141E36";ctx.fillRect(gx-4,gy-4,cs*N+8,cs*N+8);
+    for(let r=0;r<N;r++)for(let c=0;c<N;c++){if(G.grid[r][c])stoneCell(ctx,gx+c*cs,gy+r*cs,cs,G.grid[r][c]);else{ctx.fillStyle="#1E2A47";ctx.fillRect(gx+c*cs+1,gy+r*cs+1,cs-2,cs-2)}}
+    const gh=ghost();
+    if(gh&&gh.ok){ctx.globalAlpha=.35;G.drag.p.s.forEach(([a,b])=>stoneCell(ctx,gx+(gh.c+b)*cs,gy+(gh.r+a)*cs,cs,G.drag.p.col));ctx.globalAlpha=1}
+    G.tray.forEach((p,i)=>{if(!p||(G.drag&&G.drag.i===i))return;const [h,w]=dims(p.s);const ox=i*slotW+(slotW-w*ts)/2,oy=ty+(G.H-ty-h*ts)/2;ctx.globalAlpha=fitsAnywhere(p)?1:.35;p.s.forEach(([a,b])=>stoneCell(ctx,ox+b*ts,oy+a*ts,ts,p.col));ctx.globalAlpha=1});
+    if(gh)G.drag.p.s.forEach(([a,b])=>stoneCell(ctx,gh.tlx+b*cs,gh.tly+a*cs,cs,G.drag.p.col));
+    drawParts(G);
+  }
+  hud();loop(G,dt=>stepParts(G,dt),draw);startScreen(G,"Chiram sent stonemasons to build David's palace. Drag stones onto the board and fill whole rows or columns to clear them. Every new tray of stones comes with a question for bonus points. If no stone fits, a right answer clears space.");
+}
+
+/* Game 5: Gather the 30,000 (snake) */
+function gameSnake(g){
+  const G=arena(g,`<span>Score <b id="hs">0</b></span><span>Men <b id="hm">0</b></span><span>Revives left <b id="hr">3</b></span>`);
+  const sz=Math.max(18,Math.floor(G.W/22)),cols=Math.floor(G.W/sz),rows=Math.floor(G.H/sz),ox=Math.floor((G.W-cols*sz)/2),oy=Math.floor((G.H-rows*sz)/2);
+  Object.assign(G,{body:[],dir:[1,0],next:[1,0],acc:0,men:0,food:null,scroll:null,revives:0});
+  const same=(a,b)=>a&&b&&a[0]===b[0]&&a[1]===b[1];
+  function reset(len){const cy=Math.floor(rows/2),cx=Math.floor(cols/2);len=Math.max(3,Math.min(len,cx));G.body=[];for(let i=0;i<len;i++)G.body.push([cx-i,cy]);G.dir=[1,0];G.next=[1,0]}
+  reset(4);
+  const free=()=>{for(let t=0;t<300;t++){const p=[Math.floor(Math.random()*cols),Math.floor(Math.random()*rows)];if(!G.body.some(b=>same(b,p))&&!same(p,G.food)&&!(G.scroll&&same(p,G.scroll.p)))return p}return [0,0]};
+  G.food=free();
+  const hud=()=>{$("#hs").textContent=G.score;$("#hm").textContent=G.men;$("#hr").textContent=3-G.revives};
+  const turn=(dx,dy)=>{if(dx===-G.dir[0]&&dy===-G.dir[1])return;G.next=[dx,dy]};
+  const kd=e=>{if(document.querySelector(".qov"))return;const k=e.key;if(k==="ArrowUp"||k==="w"||k==="W")turn(0,-1);else if(k==="ArrowDown"||k==="s"||k==="S")turn(0,1);else if(k==="ArrowLeft"||k==="a"||k==="A")turn(-1,0);else if(k==="ArrowRight"||k==="d"||k==="D")turn(1,0)};
+  addEventListener("keydown",kd);ARC.cleanup=()=>removeEventListener("keydown",kd);
+  let down=null;const pos=e=>{const b=G.cv.getBoundingClientRect();return [(e.clientX-b.left)*G.W/b.width,(e.clientY-b.top)*G.H/b.height]};
+  G.cv.onpointerdown=e=>{down=pos(e)};
+  G.cv.onpointerup=e=>{if(!down||!G.started||G.paused||G.over)return;const [x,y]=pos(e);let dx=x-down[0],dy=y-down[1];
+    if(Math.hypot(dx,dy)<20){const h=G.body[0];dx=x-(ox+h[0]*sz+sz/2);dy=y-(oy+h[1]*sz+sz/2);if(G.dir[0]!==0){turn(0,dy<0?-1:1)}else{turn(dx<0?-1:1,0)}}
+    else if(Math.abs(dx)>Math.abs(dy))turn(dx<0?-1:1,0);else turn(0,dy<0?-1:1);down=null};
+  function crash(){const h=G.body[0];burst(G,ox+h[0]*sz+sz/2,oy+h[1]*sz+sz/2,"#E8B84A",18);
+    if(G.revives>=3){gameOver(G);return}
+    askQ(G,"The procession crashed!",`Answer correctly to keep going (${3-G.revives} revives left).`,ok=>{if(ok){G.revives++;reset(G.body.length);G.food=free();hud();toast("Back on the road!")}else gameOver(G)})}
+  function update(dt){
+    stepParts(G,dt);G.acc+=dt;const step=Math.max(.075,.15-G.men*.0025);if(G.acc<step)return;G.acc=0;
+    G.dir=G.next;const h=G.body[0],n=[h[0]+G.dir[0],h[1]+G.dir[1]];
+    if(n[0]<0||n[1]<0||n[0]>=cols||n[1]>=rows||G.body.slice(0,-1).some(b=>same(b,n))){crash();return}
+    G.body.unshift(n);
+    if(same(n,G.food)){G.men++;G.score+=10;burst(G,ox+n[0]*sz+sz/2,oy+n[1]*sz+sz/2,"#4CC583",8);G.food=free();if(G.men%5===0&&!G.scroll)G.scroll={p:free(),t:9}}
+    else G.body.pop();
+    if(G.scroll&&same(n,G.scroll.p)){G.scroll=null;askQ(G,"Golden scroll!","Answer correctly for +50 points.",ok=>{if(ok){G.score+=50;toast("+50!")}hud()})}
+    if(G.scroll){G.scroll.t-=step;if(G.scroll.t<=0)G.scroll=null}
+    hud();
+  }
+  function draw(){
+    const ctx=G.ctx;ctx.fillStyle="#0B1222";ctx.fillRect(0,0,G.W,G.H);
+    for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){ctx.fillStyle=(r+c)%2?"#111B30":"#0F182B";ctx.fillRect(ox+c*sz,oy+r*sz,sz,sz)}
+    ctx.strokeStyle="#2E3D5C";ctx.lineWidth=2;ctx.strokeRect(ox+1,oy+1,cols*sz-2,rows*sz-2);
+    const f=G.food;if(f){const x=ox+f[0]*sz+sz/2,y=oy+f[1]*sz+sz/2;ctx.fillStyle="#4CC583";ctx.fillRect(x-sz*.22,y-sz*.05,sz*.44,sz*.4);ctx.fillStyle="#E8C39E";ctx.beginPath();ctx.arc(x,y-sz*.2,sz*.18,0,7);ctx.fill()}
+    if(G.scroll){const x=ox+G.scroll.p[0]*sz,y=oy+G.scroll.p[1]*sz;ctx.globalAlpha=G.scroll.t<3&&Math.floor(G.scroll.t*6)%2?.4:1;ctx.fillStyle="#E8B84A";ctx.fillRect(x+3,y+5,sz-6,sz-10);ctx.fillStyle="#A9781C";ctx.fillRect(x+1,y+4,4,sz-8);ctx.fillRect(x+sz-5,y+4,4,sz-8);ctx.globalAlpha=1}
+    G.body.forEach((b,i)=>{const x=ox+b[0]*sz,y=oy+b[1]*sz;ctx.fillStyle=i===0?"#E8B84A":i%2?"#3E7CB1":"#5BB8EE";ctx.beginPath();ctx.roundRect?ctx.roundRect(x+2,y+2,sz-4,sz-4,5):ctx.rect(x+2,y+2,sz-4,sz-4);ctx.fill();
+      if(i===0){ctx.fillStyle="#1a1405";const ex=G.dir[0]*sz*.18,ey=G.dir[1]*sz*.18;ctx.beginPath();ctx.arc(x+sz/2+ex-G.dir[1]*sz*.15,y+sz/2+ey-G.dir[0]*sz*.15,2,0,7);ctx.arc(x+sz/2+ex+G.dir[1]*sz*.15,y+sz/2+ey+G.dir[0]*sz*.15,2,0,7);ctx.fill()}});
+    drawParts(G);
+  }
+  hud();loop(G,update,draw);startScreen(G,"David gathered 30,000 chosen men to bring up the Aron. Steer the procession to gather each man. Every 5 men, a golden scroll appears: grab it for a bonus question. Don't hit the walls or your own line!");
+}
+
+/* Game 6: Answer Rain */
+function wrapLines(ctx,t,maxW){const words=String(t).split(" "),out=[];let cur="";for(const w of words){const test=cur?cur+" "+w:w;if(ctx.measureText(test).width>maxW&&cur){out.push(cur);cur=w}else cur=test}out.push(cur);return out}
+function gameRain(g){
+  const G=arena(g,`<span>Score <b id="hs">0</b></span><span>Hearts <b id="hl">♥♥♥</b></span>`);
+  const ban=document.createElement("div");ban.className="qban";G.ar.appendChild(ban);
+  Object.assign(G,{lives:3,lane:1,q:null,order:[],y:0,res:0,ok:false,lines:[],bh:40,top:80});
+  const L=4,laneW=G.W/L,catchY=G.H-46;
+  const hud=()=>{$("#hs").textContent=G.score;$("#hl").textContent="♥".repeat(Math.max(0,G.lives))+"♡".repeat(Math.max(0,3-G.lives))};
+  function nextQ(){
+    if(!ARC.pool.length)ARC.pool=shuffle(QUIZ.filter(q=>inUnit(q[0])));
+    G.q=ARC.pool.pop();G.order=shuffle(G.q[2].map((t,k)=>k));G.res=0;
+    ban.innerHTML=`${tag(G.q[0])}<div>${G.q[1]}</div>`;G.top=ban.offsetHeight+8;G.y=G.top;
+    const ctx=G.ctx;ctx.font="500 13px Rubik,system-ui,sans-serif";G.lines=G.order.map(k=>wrapLines(ctx,G.q[2][k],laneW-18));G.bh=Math.max(...G.lines.map(l=>l.length))*16+16;
+  }
+  const kd=e=>{if(document.querySelector(".qov")||e.repeat)return;if(e.key==="ArrowLeft"||e.key==="a"||e.key==="A")G.lane=Math.max(0,G.lane-1);if(e.key==="ArrowRight"||e.key==="d"||e.key==="D")G.lane=Math.min(L-1,G.lane+1)};
+  addEventListener("keydown",kd);ARC.cleanup=()=>removeEventListener("keydown",kd);
+  G.cv.onpointerdown=G.cv.onpointermove=e=>{if(e.type==="pointermove"&&!e.buttons&&e.pointerType!=="mouse")return;G.lane=Math.max(0,Math.min(L-1,Math.floor(ptrX(G,e)/laneW)))};
+  function update(dt){
+    stepParts(G,dt);
+    if(G.res>0){G.res-=dt;if(G.res<=0){if(G.lives<=0)gameOver(G);else nextQ()}return}
+    const fast=ARC.keys.ArrowDown||ARC.keys.s||ARC.keys.S;const v=(26+Math.min(50,G.right*2.5))*(fast?5:1);
+    G.y+=v*dt;
+    if(G.y+G.bh>=catchY){G.y=catchY-G.bh;const ok=G.order[G.lane]===G.q[3];G.ok=ok;G.asked++;
+      const cx=G.lane*laneW+laneW/2;
+      if(ok){G.right++;S.streak++;const pts=10+(S.streak>=3?5:0);G.score+=pts;burst(G,cx,catchY-10,"#4CC583",16);toast(S.streak>=3?`+${pts} · ${S.streak} streak!`:`Correct! +${pts}`)}
+      else{G.lives--;S.streak=0;burst(G,cx,catchY-10,"#F07A6C",16);toast("Answer: "+G.q[2][G.q[3]])}
+      renderStats();hud();G.res=ok?1.1:2.4}
+  }
+  function draw(){
+    const ctx=G.ctx;sky(G,"#0B1222","#1A2A48");
+    for(let i=1;i<L;i++){ctx.strokeStyle="#22304D";ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(i*laneW,G.top);ctx.lineTo(i*laneW,G.H);ctx.stroke()}
+    ctx.fillStyle="rgba(232,184,74,.08)";ctx.fillRect(G.lane*laneW,G.top,laneW,G.H-G.top);
+    if(G.q){ctx.font="500 13px Rubik,system-ui,sans-serif";ctx.textAlign="center";ctx.textBaseline="top";
+      G.order.forEach((k,i)=>{const x=i*laneW+6,w=laneW-12;let fill="#22304D",stroke="#5BB8EE";
+        if(G.res>0){if(k===G.q[3]){fill="#1F6B43";stroke="#4CC583"}else if(i===G.lane){fill="#6B2A24";stroke="#F07A6C"}}
+        ctx.fillStyle=fill;ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.beginPath();ctx.roundRect?ctx.roundRect(x,G.y,w,G.bh,8):ctx.rect(x,G.y,w,G.bh);ctx.fill();ctx.stroke();
+        ctx.fillStyle="#EEF2F8";G.lines[i].forEach((ln,j)=>ctx.fillText(ln,x+w/2,G.y+8+j*16))})}
+    const cx=G.lane*laneW+laneW/2;ctx.fillStyle="#E8B84A";ctx.beginPath();ctx.moveTo(cx-laneW*.36,catchY+4);ctx.lineTo(cx+laneW*.36,catchY+4);ctx.lineTo(cx+laneW*.28,catchY+26);ctx.lineTo(cx-laneW*.28,catchY+26);ctx.fill();
+    ctx.fillStyle="#A9781C";ctx.fillRect(cx-laneW*.36,catchY+2,laneW*.72,4);
+    drawParts(G);
+  }
+  hud();nextQ();loop(G,update,draw);startScreen(G,"Read the question at the top. Four answers fall from the sky: move your basket under the right one before it lands. Hold ↓ to drop it faster once you're sure. Wrong answers cost a heart.");
 }
 
 renderPickers();renderStats();start();
