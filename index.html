@@ -687,13 +687,13 @@ const GAMES=[
 {id:"rain",name:"Answer Rain",desc:"Four answers fall from the sky. Slide under the right one before it lands. Speeds up as you go.",ctl:"Move: ← → / A D, or tap a lane. Hold ↓ / S to drop faster. 3 hearts.",run:gameRain}];
 function arcade(){
   const src=S.unit==="all"?"all three units":UNITS[S.unit].name;
-  $("#stage").innerHTML=`<h3 style="font-size:1.5rem">Arcade</h3><p class="muted" style="margin:4px 0 0">Every game runs on what you know. Questions come from ${src}. Right answers refill energy, revive you, and power you up.</p>
+  $("#stage").innerHTML=`<h3 style="font-size:1.5rem">Arcade</h3><p class="muted" style="margin:4px 0 0">Every game runs on what you know. Questions come from ${src}. Right answers refill energy, revive you, and power you up. A checkpoint question also pops up every 10 seconds, even when you're doing great.</p>
   <div class="gamegrid">${GAMES.map(g=>`<button class="gcard" data-g="${g.id}"><span class="art">${ICONS[g.id]}</span><span class="gtxt"><b>${g.name}</b><small>${g.desc}</small>${S.best["arc_"+g.id+S.unit]!=null?`<span class="best">High score: ${S.best["arc_"+g.id+S.unit]}</span>`:""}</span></button>`).join("")}</div>`;
   $("#stage").querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{const g=GAMES.find(x=>x.id===b.dataset.g);g.run(g)});
 }
 function arena(g,hudHTML){
   arcStop();const st=$("#stage");
-  st.innerHTML=`<div class="row spread"><button class="btn ghost" id="aback">← All games</button><div class="hud">${hudHTML}</div></div><div class="arena" id="arena"><canvas id="cv"></canvas></div><p class="muted ctl">${g.ctl}</p>`;
+  st.innerHTML=`<div class="row spread"><button class="btn ghost" id="aback">← All games</button><div class="hud">${hudHTML}<span id="hqw" title="Seconds until the next checkpoint question">Next ? <b id="hq">10</b>s</span></div></div><div class="arena" id="arena"><canvas id="cv"></canvas></div><p class="muted ctl">${g.ctl}</p>`;
   $("#aback").onclick=()=>{arcStop();arcade()};
   const ar=$("#arena"),cv=$("#cv");const W=ar.clientWidth,H=Math.round(Math.min(540,Math.max(420,W*1.05)));
   const dpr=window.devicePixelRatio||1;cv.width=W*dpr;cv.height=H*dpr;cv.style.height=H+"px";
@@ -706,11 +706,17 @@ function burst(G,x,y,col,n=12){for(let i=0;i<n;i++){const a=Math.random()*6.28,s
 function stepParts(G,dt){G.parts.forEach(p=>{p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=200*dt;p.life-=dt});G.parts=G.parts.filter(p=>p.life>0)}
 function drawParts(G){const c=G.ctx;G.parts.forEach(p=>{c.globalAlpha=Math.max(0,p.life/.6);c.fillStyle=p.col;c.fillRect(p.x-2,p.y-2,4,4)});c.globalAlpha=1}
 function sky(G,top,bot){const c=G.ctx,gr=c.createLinearGradient(0,0,0,G.H);gr.addColorStop(0,top);gr.addColorStop(1,bot);c.fillStyle=gr;c.fillRect(0,0,G.W,G.H);c.fillStyle="#EEF2F8";G.stars.forEach(s=>{c.globalAlpha=.5;c.beginPath();c.arc(s.x,s.y,s.r,0,7);c.fill()});c.globalAlpha=1}
-function loop(G,update,draw){G.last=performance.now();const f=t=>{const dt=Math.min(.033,(t-G.last)/1000);G.last=t;if(G.started&&!G.paused&&!G.over)update(dt);draw();if(ARC.raf)ARC.raf=requestAnimationFrame(f)};ARC.raf=requestAnimationFrame(f)}
+const CHECK_EVERY=10;
+function checkpoint(G){askQ(G,"Checkpoint question!",`One every ${CHECK_EVERY} seconds. Right = +25 points, wrong = −10.`,ok=>{G.score=ok?G.score+25:Math.max(0,G.score-10);const hs=document.getElementById("hs");if(hs)hs.textContent=G.score;toast(ok?"+25 checkpoint bonus":"−10 points")})}
+function loop(G,update,draw){G.last=performance.now();G.playT=0;const f=t=>{const dt=Math.min(.033,(t-G.last)/1000);G.last=t;
+  if(G.started&&!G.paused&&!G.over){update(dt);
+    if(!G.noTimer&&!G.paused&&!G.over){G.playT+=dt;if(G.playT>=CHECK_EVERY&&!G.drag)checkpoint(G);
+      const r=Math.max(0,Math.ceil(CHECK_EVERY-G.playT));if(r!==G.lastR){G.lastR=r;const el=document.getElementById("hq");if(el)el.textContent=r}}}
+  draw();if(ARC.raf)ARC.raf=requestAnimationFrame(f)};ARC.raf=requestAnimationFrame(f)}
 function overlay(G,html){const ov=document.createElement("div");ov.className="qov";ov.innerHTML=`<div class="qbox">${html}</div>`;G.ar.appendChild(ov);return ov}
 function startScreen(G,how){const ov=overlay(G,`<div class="qtitle">${G.g.name}</div><p style="margin:0">${how}</p><div class="row"><button class="btn gold" id="go">Start ▶</button></div>`);const b=ov.querySelector("#go");b.focus();b.onclick=()=>{ov.remove();G.started=true;G.last=performance.now()}}
 function askQ(G,title,sub,cb){
-  if(G.paused||G.over)return;G.paused=true;
+  if(G.paused||G.over)return;G.paused=true;G.playT=0;
   if(!ARC.pool.length)ARC.pool=shuffle(QUIZ.filter(q=>inUnit(q[0])));
   const q=ARC.pool.pop(),order=shuffle(q[2].map((t,k)=>k));
   const ov=overlay(G,`<div class="qtitle">${title}</div><div class="muted">${sub}</div><div>${tag(q[0])}</div><div class="qtext">${q[1]}</div><div class="opts">${order.map((k,n)=>`<button class="opt" data-k="${k}"><span class="k">${n+1}</span><span>${q[2][k]}</span></button>`).join("")}</div><div class="qfb"></div>`);
@@ -962,6 +968,7 @@ function gameSnake(g){
 function wrapLines(ctx,t,maxW){const words=String(t).split(" "),out=[];let cur="";for(const w of words){const test=cur?cur+" "+w:w;if(ctx.measureText(test).width>maxW&&cur){out.push(cur);cur=w}else cur=test}out.push(cur);return out}
 function gameRain(g){
   const G=arena(g,`<span>Score <b id="hs">0</b></span><span>Hearts <b id="hl">♥♥♥</b></span>`);
+  G.noTimer=true;$("#hqw").remove();
   const ban=document.createElement("div");ban.className="qban";G.ar.appendChild(ban);
   Object.assign(G,{lives:3,lane:1,q:null,order:[],y:0,res:0,ok:false,lines:[],bh:40,top:80});
   const L=4,laneW=G.W/L,catchY=G.H-46;
